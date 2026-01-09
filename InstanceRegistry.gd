@@ -73,7 +73,7 @@ func get_instance(type_name: String, id: String):
 	return registry[type_name].get(id, null)
 
 # Check if an instance with this type and ID exists
-func has_instance(type_name: String, id: int) -> bool:
+func has_instance(type_name: String, id: String) -> bool:
 	if not registry.has(type_name):
 		return false
 	

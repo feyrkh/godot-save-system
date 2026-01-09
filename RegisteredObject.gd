@@ -72,9 +72,9 @@ static func from_dict(dict: Dictionary) -> RegisteredObject:
 # Helper method for subclasses to use in their from_dict implementations
 static func _resolve_canonical(obj: RegisteredObject, dict: Dictionary) -> RegisteredObject:
 	# Set the ID from the dictionary
-	var loaded_id = dict.get("__id__", -1)
+	var loaded_id = dict.get("__id__", "")
 	
-	if loaded_id != -1:
+	if loaded_id != "":
 		var registry = InstanceRegistry.get_registry()
 		
 		# Check if canonical instance already exists
